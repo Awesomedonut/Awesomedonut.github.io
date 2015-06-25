@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1618696f-207e-4e2f-b604-2268eaf06d18" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/imgs/Donutventure Signature.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/intro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Awesome's Donuts/Awesome's Donuts.html" afterPath="$PROJECT_DIR$/Awesome's Donuts/Awesome's Donuts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Awesome's Donuts/Awesome's Donuts.js" afterPath="$PROJECT_DIR$/Awesome's Donuts/Awesome's Donuts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/happea fathers day.html" afterPath="$PROJECT_DIR$/happea fathers day.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/intro.html" afterPath="$PROJECT_DIR$/interactive donutventure/intro.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Awesomedonut.github.io.iws" />
@@ -28,21 +24,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="intro.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="intro.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interactive donutventure/intro.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46424758">
-              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+            <state vertical-scroll-proportion="-19.375">
+              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Awesome's Donuts.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Awesome's Donuts/Awesome's Donuts.css">
+      <file leaf-file-name="01.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/01.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="1" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
+            <state vertical-scroll-proportion="-18.75">
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="02.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/02.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.048025616">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="03.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/03.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="04.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/04.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,6 +104,10 @@
         <option value="$PROJECT_DIR$/Awesome's Donuts/Awesome's Donuts.js" />
         <option value="$PROJECT_DIR$/Awesome's Donuts/Awesome's Donuts.html" />
         <option value="$PROJECT_DIR$/interactive donutventure/intro.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/03.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/04.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/02.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/01.html" />
       </list>
     </option>
   </component>
@@ -148,24 +178,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="interactive donutventure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Awesomedonut.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Awesomedonut.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interactive donutventure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="imgs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -608,10 +620,42 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/03.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/04.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/interactive donutventure/intro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46424758">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        <state vertical-scroll-proportion="-19.375">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.75">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/02.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.048025616">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
           <folding />
         </state>
       </provider>
