@@ -1,8 +1,8 @@
 /**
- * Created by davidwu on 2015-06-08.
+ * Created by donuts on 2015-06-08.
  */
 
-var function addDragNDropHandler () {
+var addDragNDropHandler = function (){
     var donutimg = document.getElementsByClassName("donut")
 }
 
