@@ -2,14 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1618696f-207e-4e2f-b604-2268eaf06d18" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/monkeyStuff/monkeyCSS.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/monkeyStuff/monkeyHTML.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interactive donutventure/01.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interactive donutventure/02.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interactive donutventure/03.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interactive donutventure/04.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interactive donutventure/05.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/interactive donutventure/06.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/29.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/30.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/31.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/32.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/33.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/34.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/35.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/36.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/37.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/38.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/39.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/40.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/41-60/41.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/61-80/61.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/13.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/13.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/14.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/14.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/15.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/15.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/20.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/20.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/21-40/28.html" afterPath="$PROJECT_DIR$/interactive donutventure/21-40/28.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/intro.html" afterPath="$PROJECT_DIR$/interactive donutventure/intro.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -32,10 +43,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="01.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/01.html">
+      <file leaf-file-name="15.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/15.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-24.375">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="16.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/16.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.875">
+              <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="03.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/03.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="08.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/08.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="13.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/13.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.35714287">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="05.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/05.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -59,22 +120,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/pictureChallenge.html" />
-        <option value="$PROJECT_DIR$/Robots.css" />
-        <option value="$PROJECT_DIR$/Imgs/Robots.js" />
-        <option value="$PROJECT_DIR$/Robots.html" />
-        <option value="$PROJECT_DIR$/Awesome's Donuts.js" />
-        <option value="$PROJECT_DIR$/Awesome's Donuts.css" />
-        <option value="$PROJECT_DIR$/Awesome's Donuts.html" />
-        <option value="$PROJECT_DIR$/Happea Father's Day.html" />
-        <option value="$PROJECT_DIR$/happea fathers day.html" />
-        <option value="$PROJECT_DIR$/Awesome's Donuts/Awesome's Donuts.js" />
-        <option value="$PROJECT_DIR$/Awesome's Donuts/Awesome's Donuts.html" />
-        <option value="$PROJECT_DIR$/interactive donutventure/imgs/05.html" />
-        <option value="$PROJECT_DIR$/monkeyStuff/monkeyHTML.html" />
         <option value="$PROJECT_DIR$/monkeyStuff/monkeyCSS.css" />
-        <option value="$PROJECT_DIR$/interactive donutventure/intro.html" />
         <option value="$PROJECT_DIR$/interactive donutventure/01.html" />
         <option value="$PROJECT_DIR$/interactive donutventure/02.html" />
         <option value="$PROJECT_DIR$/interactive donutventure/03.html" />
@@ -103,6 +149,28 @@
         <option value="$PROJECT_DIR$/interactive donutventure/13.html" />
         <option value="$PROJECT_DIR$/interactive donutventure/04.html" />
         <option value="$PROJECT_DIR$/interactive donutventure/14.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/01-20/01.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/01-20/14.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/28.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/29.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/30.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/31.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/32.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/33.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/34.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/35.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/36.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/37.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/38.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/39.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/21-40/40.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/41-60/41.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/01-20/15.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/01-20/61.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/01-20/20.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/61-80/61.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/intro.html" />
+        <option value="$PROJECT_DIR$/interactive donutventure/01-20/13.html" />
       </list>
     </option>
   </component>
@@ -189,6 +257,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="21-40" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Awesomedonut.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Awesomedonut.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interactive donutventure" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="01-20" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -239,11 +325,11 @@
       <recent name="$PROJECT_DIR$/Imgs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/interactive donutventure/61-80" />
+      <recent name="$PROJECT_DIR$/interactive donutventure/21-40" />
       <recent name="$PROJECT_DIR$/interactive donutventure" />
       <recent name="$PROJECT_DIR$/interactive donutventure/imgs" />
       <recent name="$PROJECT_DIR$/Imgs" />
-      <recent name="$PROJECT_DIR$/Imgs/Donut Pics" />
-      <recent name="$PROJECT_DIR$/Awesome's Donuts" />
     </key>
   </component>
   <component name="RunManager">
@@ -321,6 +407,25 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26141304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -470,10 +575,139 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interactive donutventure/intro.html">
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/28.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.625">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.22411953">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/29.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/30.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/31.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-28.125">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/34.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/35.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/36.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/37.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/38.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/39.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/40.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/41-60/41.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/14.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.5">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/02.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/04.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/20.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/61-80/61.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57630736">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -481,6 +715,86 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/19.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/intro.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6563501">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/15.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.375">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/05.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/16.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/08.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/33.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7043757">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/21-40/32.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7043757">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/03.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interactive donutventure/01-20/13.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35714287">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding />
         </state>
       </provider>
