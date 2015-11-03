@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1618696f-207e-4e2f-b604-2268eaf06d18" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Awesomedonut/Pics/Logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/interactive donutventure/81-100/81.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Awesomedonut/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/05.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/05.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/06.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/06.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/10.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/10.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/13.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/13.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/14.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/14.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/15.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/15.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/16.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/16.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/17.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/17.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interactive donutventure/01-20/18.html" afterPath="$PROJECT_DIR$/interactive donutventure/01-20/18.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="1618696f-207e-4e2f-b604-2268eaf06d18" name="Default" comment="" />
     <ignored path="Awesomedonut.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
