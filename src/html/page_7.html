@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head><p id="demo" onclick="ansfunc()">Click me.</p></head>
+    <body>
+    <p>Chad then attends a math lecture.... </p>
+    <p>Why did the MACM textbook look so sad?</p>
+    <p>Because of all its problems.</p>
+    <div>
+        <img src="/src/img/macm.png" alt="">
+    </div>
+<script>
+    function ansfunc(){
+        let ans = prompt("What is 1 + 4:");
+        document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+                 
+var isdeath = true;
+        let start = Date.now();
+  
+        let timer = setInterval(function() {
+          let timePassed = Date.now() - start;
+  
+      
+          if (timePassed > 5000){
+            isdeath = false;
+          } 
+        }, 20);
+        let text;
+  
+  if(ans == "5"){
+      if(isdeath){
+          alert("You answered the question so fast that your prof got a heart attack!");
+      }else{
+          alert("You answered the question right. :)");
+      }
+  }else{
+      alert("Lolol you're wrong");
+  }
+}
+    
+    </script>
+    <a href="page_9.html">Next -></a>
+    <audio controls autoplay><source src="../../audio/scheming-weasel-faster-version-by-kevin-macleod-from-filmmusic-io.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+        </audio></audio>
+    </body>
+</html>

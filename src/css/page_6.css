@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.Title{
+    font-family: 'Bangers', cursive;
+}
+
+#accident{
+    position: fixed;
+    bottom: 200px;
+    right: 0;
+    left: 500px;
+}
