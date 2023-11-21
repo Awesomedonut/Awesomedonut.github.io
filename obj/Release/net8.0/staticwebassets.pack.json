@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\bin\\Release\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\obj\\Release\\net8.0\\compressed\\ktsr7suxan.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\obj\\Release\\net8.0\\scopedcss\\bundle\\Awesomedonut.github.io.styles.css",
+      "PackagePath": "staticwebassets\\Awesomedonut.github.io.styles.css"
+    },
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\github\\SFU\\Awesomedonut.github.io\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.Awesomedonut.github.io.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.Awesomedonut.github.io.props",
+      "PackagePath": "build\\Awesomedonut.github.io.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Awesomedonut.github.io.props",
+      "PackagePath": "buildMultiTargeting\\Awesomedonut.github.io.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.Awesomedonut.github.io.props",
+      "PackagePath": "buildTransitive\\Awesomedonut.github.io.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
