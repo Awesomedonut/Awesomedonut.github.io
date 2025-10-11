@@ -228,7 +228,8 @@
             transform: translateY(-5px);
         }
 
-        .art-placeholder {
+        .art-placeholder,
+        .project-placeholder {
             width: 100%;
             height: 200px;
             background: linear-gradient(45deg, #667eea, #764ba2);
@@ -239,6 +240,84 @@
             justify-content: center;
             color: white;
             font-size: 1.2rem;
+        }
+
+        .projects-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 2px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .projects-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2d3748;
+            font-size: 2.5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .project-card h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tech-tag {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-link {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border: 2px solid #667eea;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .project-link:hover {
+            background: #667eea;
+            color: white;
         }
 
         @media (max-width: 768px) {
@@ -317,6 +396,59 @@
                                 <text x="12" y="16" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" font-weight="700" fill="currentColor">Y</text>
                             </svg>
                         </a>
+                    </div>
+                </div>
+                
+                <div class="projects-section">
+                    <h2>My Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-placeholder">Project Demo</div>
+                            <h3>Web Application</h3>
+                            <p>A full-stack web application built with modern technologies. Features user authentication, real-time updates, and responsive design.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">CSS3</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Live Demo</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <div class="project-placeholder">Mobile App</div>
+                            <h3>Mobile Application</h3>
+                            <p>Cross-platform mobile app with native performance. Includes offline capabilities and push notifications.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React Native</span>
+                                <span class="tech-tag">Firebase</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">Redux</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">App Store</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card">
+                            <div class="project-placeholder">Data Analysis</div>
+                            <h3>Data Science Project</h3>
+                            <p>Machine learning project analyzing large datasets. Includes data visualization and predictive modeling.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">Jupyter</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">Notebook</a>
+                                <a href="#" class="project-link">GitHub</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
