@@ -60,17 +60,19 @@
 
       .art-gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
         margin-top: 2rem;
+        align-items: start;
       }
 
       .art-item {
         background: rgba(255, 255, 255, 0.8);
         border-radius: 15px;
-        padding: 1rem;
+        padding: 0.5rem;
         box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         transition: transform 0.3s ease;
+        overflow: hidden;
       }
 
       .art-item:hover {
@@ -81,7 +83,23 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
-        object-fit: cover;
+        object-fit: contain;
+        display: block;
+        max-height: 500px;
+      }
+
+      /* Special handling for different orientations */
+      .art-item img[src*="7025"],
+      .art-item img[src*="7027"] {
+        /* Vertical images */
+        max-height: 400px;
+      }
+
+      .art-item img[src*="7026"],
+      .art-item img[src*="7028"], 
+      .art-item img[src*="7030"] {
+        /* Horizontal images */
+        max-height: 300px;
       }
 
       .youtube-section {
@@ -182,6 +200,17 @@
           gap: 1rem;
         }
 
+        .art-item img[src*="7025"],
+        .art-item img[src*="7027"] {
+          max-height: 350px;
+        }
+
+        .art-item img[src*="7026"],
+        .art-item img[src*="7028"], 
+        .art-item img[src*="7030"] {
+          max-height: 250px;
+        }
+
         .youtube-container, .writing-container {
           padding: 1rem;
           margin: 1rem;
@@ -210,10 +239,10 @@
         <h2>YouTube Channel ･ﾟ'✧｡</h2>
         <div class="youtube-container">
       
-          <a href="https://www.youtube.com/@jin_glebell" class="channel-link">Visit My YouTube Channel →</a>
+          <a href="https://www.youtube.com/@jin_glebell" class="channel-link"> My YouTube Channel →</a>
           <div class="youtube-video">
             <iframe 
-              src="https://youtu.be/3pf_PXyt1Ik" 
+              src="https://www.youtube.com/embed/3pf_PXyt1Ik" 
               title="My Most Popular Video" 
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -223,31 +252,39 @@
         </div>
       </section>
 
-      <!-- Writing Section -->
-      <section class="writing-section">
-        <h2>Writing ･ﾟ'✧｡</h2>
-        <div class="writing-container">
-          <p>I love writing fiction, nonfiction, and everything in between. Explore my written works and stories.</p>
-          <a href="#" class="btn">Read My Writing</a>
-        </div>
-      </section>
+
 
       <!-- Traditional Art Section -->
       <section class="art-section">
         <h2>Traditional Art ･ﾟ'✧｡</h2>
         <div class="art-gallery">
           <div class="art-item">
-            <img src="./IMG_7025.jpg" alt="Traditional artwork" />
-          </div>
-          <!-- Add more art items as needed -->
-          <div class="art-item">
-            <img src="./IMG_7025.jpg" alt="Traditional artwork" />
+            <img src="./IMG_7025.jpg" alt="Traditional artwork - vertical piece" />
           </div>
           <div class="art-item">
-            <img src="./IMG_7025.jpg" alt="Traditional artwork" />
+            <img src="./IMG_7027.jpg" alt="Traditional artwork - vertical piece" />
+          </div>
+          <div class="art-item">
+            <img src="./IMG_7026.jpg" alt="Traditional artwork - horizontal piece" />
+          </div>
+          <div class="art-item">
+            <img src="./IMG_7028.jpg" alt="Traditional artwork - horizontal piece" />
+          </div>
+          <div class="art-item">
+            <img src="./IMG_7030.jpg" alt="Traditional artwork - horizontal piece" />
           </div>
         </div>
       </section>
+
+            <!-- Writing Section -->
+      <section class="writing-section">
+        <h2>Writing ･ﾟ'✧｡</h2>
+        <div class="writing-container">
+         <p>Samples of my writing!</p>
+          <a href="https://the-peak.ca/tag/jin-song/" class="btn">The Peak</a>
+        </div>
+      </section>
+      
     </main>
 
     <footer>
