@@ -1,531 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jin's Portfolio</title>
-    <link rel="icon" type="image/png" href="/favicon.png">
+<html>
+  <!-- you found a secret :) -->
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/stn7ubm.css" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      /* Graduation countdown banner styles */
+      .graduation-banner {
+        background: transparent;
+        padding: 1rem;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
+      .graduation-banner h2 {
+        font-size: 1.2rem;
+        margin: 0 auto 0.5rem auto;
+        color: #2d5a5a;
+        font-family: "adelle-sans", sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        text-align: center;
+      }
 
-        .banner {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1rem;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-        }
+      #countdown {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2d5a5a;
+        font-family: "halyard-display", sans-serif;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        display: inline-block;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
 
-        .banner h2 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: #4a5568;
-        }
+      /* Adjust body to account for banner */
+      body {
+        padding-top: 80px;
+      }
 
+      /* Adjust navbar position */
+      #navbar {
+        top: 80px;
+      }
+
+      @media screen and (max-width: 814px) {
+        .graduation-banner h2 {
+          font-size: 1rem;
+        }
+        
         #countdown {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #667eea;
+          font-size: 1.2rem;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+        
+        body {
+          padding-top: 70px;
         }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
+        
+        #navbar {
+          top: 70px;
         }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #667eea;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #4a5568;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #667eea;
-            background: rgba(102, 126, 234, 0.1);
-        }
-
-        main {
-            padding: 4rem 0;
-        }
-
-        .page {
-            display: none;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 3rem;
-            margin: 2rem 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .page.active {
-            display: block;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 2rem 0;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #2d3748;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #718096;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        .social-icon:hover {
-            transform: translateY(-3px);
-        }
-
-        .social-icon.github { background: #333; }
-        .social-icon.linkedin { background: #0077b5; }
-        .social-icon.email { background: #ea4335; }
-        .social-icon.twitter { background: #1da1f2; }
-        .social-icon.bluesky { background: #1185fe; }
-        .social-icon.hn { background: #ff6600; }
-
-        .social-icon svg {
-            width: 20px;
-            height: 20px;
-            fill: currentColor;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-            color: #4a5568;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .btn {
-            background: #667eea;
-            color: white;
-            padding: 0.75rem 2rem;
-            border: none;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #5a67d8;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .art-piece {
-            background: #f7fafc;
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .art-piece:hover {
-            transform: translateY(-5px);
-        }
-
-        .art-placeholder,
-        .project-placeholder {
-            width: 100%;
-            height: 200px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-        }
-
-        .projects-section {
-            margin-top: 4rem;
-            padding-top: 3rem;
-            border-top: 2px solid rgba(102, 126, 234, 0.1);
-        }
-
-        .projects-section h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: #2d3748;
-            font-size: 2.5rem;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-        }
-
-        .project-card h3 {
-            color: #2d3748;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .tech-tag {
-            background: rgba(102, 126, 234, 0.1);
-            color: #667eea;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .project-link {
-            text-decoration: none;
-            color: #667eea;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border: 2px solid #667eea;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .project-link:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .page {
-                padding: 2rem;
-                margin: 1rem;
-            }
-
-            #countdown {
-                font-size: 1.2rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-    <div class="banner">
-        <h2>🎓 Graduation Countdown</h2>
-        <div id="countdown"></div>
+  </head>
+  <body style="background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('./UmZUS1k.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <!-- Graduation countdown banner -->
+    <div class="graduation-banner">
+      <h2>🎓 Graduation Countdown</h2>
+      <div id="countdown"></div>
     </div>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Jin</div>
-                <ul class="nav-links">
-                    <li><a href="#" onclick="showPage('home')" class="active">Home</a></li>
-                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-                    <li><a href="#" onclick="showPage('art')">Art</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+    <nav id="navbar">
+      <ul class="navbar-menu">
+        <li><a class="navbar-item" href="#projects" alt="Projects">work</a></li>
+        <li>
+          <a class="navbar-item" href=" " alt="Art and animation"
+            >art + animation</a
+          >
+        </li>
+        <li>
+          <a class="navbar-item" href=" " alt="About">about</a>
+        </li>
+      </ul>
+    </nav>
     <main>
-        <div class="container">
-            <div id="home" class="page active">
-                <div class="hero">
-                    <h1>Hello world!</h1>
-                    <p>I'm Jin, a senior at SFU studying Computer Science!</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon github">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon linkedin">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon email">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h1.998l8.368 6.29 8.368-6.29h1.998A1.636 1.636 0 0 1 24 5.457z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-icon twitter">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                        </a>
-                        <a href="https://bsky.app/profile/jin-glebell.bsky.social" class="social-icon bluesky">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M12 2.25c1.6103 0 2.598 1.0266 3.815 2.4545C17.1095 6.2216 18.6696 8.053 21 8.053c0 4.5455-3.6397 5.2706-6.038 6.105 2.6383 1.0636 4.038 2.3602 4.038 4.5408 0 1.4898-1.117 2.25-2.364 2.25-1.735 0-3.5638-2.0477-4.636-3.5-1.0722 1.4523-2.901 3.5-4.636 3.5-1.247 0-2.364-.7602-2.364-2.25 0-2.1806 1.3997-3.4772 4.038-4.5408C6.6397 13.3236 3 12.5985 3 8.053c2.3304 0 3.8905-1.8315 5.1849-3.3485C9.402 3.2766 10.3897 2.25 12 2.25Z"/>
-                            </svg>
-                        </a>
-                        <a href="https://news.ycombinator.com/user?id=Awesomedonut" class="social-icon hn">
-                            <svg viewBox="0 0 24 24">
-                                <text x="12" y="16" text-anchor="middle" font-size="14" font-family="Arial, sans-serif" font-weight="700" fill="currentColor">Y</text>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="projects-section">
-                    <h2>My Projects</h2>
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <div class="project-placeholder">Project Demo</div>
-                            <h3>Web Application</h3>
-                            <p>A full-stack web application built with modern technologies. Features user authentication, real-time updates, and responsive design.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">CSS3</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">Live Demo</a>
-                                <a href="#" class="project-link">GitHub</a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <div class="project-placeholder">Mobile App</div>
-                            <h3>Mobile Application</h3>
-                            <p>Cross-platform mobile app with native performance. Includes offline capabilities and push notifications.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">Firebase</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">Redux</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">App Store</a>
-                                <a href="#" class="project-link">GitHub</a>
-                            </div>
-                        </div>
-                        
-                        <div class="project-card">
-                            <div class="project-placeholder">Data Analysis</div>
-                            <h3>Data Science Project</h3>
-                            <p>Machine learning project analyzing large datasets. Includes data visualization and predictive modeling.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">Jupyter</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">Notebook</a>
-                                <a href="#" class="project-link">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="contact" class="page">
-                <h2>Get In Touch</h2>
-                <p></p>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-
-            <div id="art" class="page">
-                <h2>My Art</h2>
-                <p></p>
-                <div class="gallery">
-                    <div class="art-piece">
-                        <div class="art-placeholder">Artwork 1</div>
-                        <h3>Project Title</h3>
-                        <p>Description of the artwork or project.</p>
-                    </div>
-                    <div class="art-piece">
-                        <div class="art-placeholder">Artwork 2</div>
-                        <h3>Project Title</h3>
-                        <p>Description of the artwork or project.</p>
-                    </div>
-                    <div class="art-piece">
-                        <div class="art-placeholder">Artwork 3</div>
-                        <h3>Project Title</h3>
-                        <p>Description of the artwork or project.</p>
-                    </div>
-                </div>
-            </div>
+      <section id="home">
+        <div id="welcome">
+          <div id="textrow">
+            <h1 id="title-text">
+              Hello world! <br />
+              I'm Jin, a software dev!
+            </h1>
+            <h3 id="subtitle-text">
+              I'm a senior at SFU studying computer science,
+              <br />
+              broadly interested in animation, software engineering, <br />
+              computer graphics, and design. <br />
+              This page is under construction! Check back soon for updates! ✨
+            </h3>
+            <h3 style="padding-top: 10px">&#8595;</h3>
+          </div>
+          <img id="main-img" src="./pfp.png" alt="art of me" />
         </div>
+      </section>
+      <section id="projects">
+        <h2>Projects ･ﾟ'✧｡</h2>
+        <div class="works-container">
+          <div class="works-item">
+       
+            <a href="https://thecdm.ca/projects/falling-skies-25-ubc-alive-research-lab" target="_blank"
+              ><img
+                class="works-img"
+                src="Printable1.jpg"
+                alt="Screenshot of a website with a list of video game characters."
+              />
+        
+              <p class="works-text">
+                placeholder
+              </p>
+            </a>
+          </div>
+          <div class="works-item">
+           
+            <img class="works-img" src="cooksmart2.png" alt="" />
+       
+            <p class="works-text">
+              placeholder
+            </p>
+          </div>
+          <div class="works-item">
+            <a
+              href=" "
+              target="_blank"
+            >
+              <img
+                class="works-img"
+                src="probloom.png"
+                alt="Image from an animated short film"
+              />
+            </a>
+
+        
+            <p class="works-text">
+              placeholder
+            </p>
+          </div>
+          <div class="works-item">
+            <img
+              class="works-img"
+              onclick=" "
+              src="h2ohyeah.png"
+              alt="Screenshot of a Figma mockup of a website's shipping page."
+            />
+         
+            <p class="works-text">placeholder/p>
+          </div>
+        </div>
+      </section>
+      <section id="other-works">
+        <h2>Other works ･ﾟﾟ･✧･｡</h2>
+        <p>Under construction! Check back soon for updates :)</p>
+      </section>
     </main>
 
+    <!-- <p id="under-construction">
+      This website is under construction! Check back soon for updates! &#x270C;
+    </p> -->
+
+
     <script>
-        function updateCountdown() {
-            const targetDate = new Date('December 16, 2025 00:00:00').getTime();
-            const now = new Date().getTime();
-            const timeLeft = targetDate - now;
+      function updateCountdown() {
+        const targetDate = new Date('December 16, 2025 00:00:00').getTime();
+        const now = new Date().getTime();
+        const timeLeft = targetDate - now;
 
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            document.getElementById('countdown').innerHTML = 
-                `${days}d ${hours}h ${minutes}m ${seconds}s until graduation!`;
-        }
+        document.getElementById('countdown').innerHTML = 
+          `${days}d ${hours}h ${minutes}m ${seconds}s until graduation!`;
+      }
 
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            document.getElementById(pageId).classList.add('active');
-            event.target.classList.add('active');
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
     </script>
-</body>
+  </body>
 </html>
