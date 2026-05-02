@@ -42,6 +42,73 @@ main {
   }
 }
 
+/* Scroll-triggered reveal animations */
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children animation */
+.stagger-children .reveal {
+  transition-delay: calc(var(--stagger-index, 0) * 120ms);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  #main-img {
+    animation: none !important;
+  }
+  .social-icon,
+  .works-item,
+  .art-item,
+  .navbar-item {
+    transition: none !important;
+  }
+}
+
 #navbar {
   background-color: transparent;
   display: flex;
@@ -90,6 +157,20 @@ main {
   transition: 0.2s;
   color: #1a3d3d;
   cursor: pointer;
+  text-shadow: 0 0 0 transparent;
+}
+
+.navbar-item::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background: #2d5a5a;
+  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.navbar-item:hover::after {
+  width: 100%;
 }
 
 #home {
@@ -265,6 +346,7 @@ footer {
   width: clamp(100px, 50%, 400px);
   /* max-width: 100%; */
   object-fit: contain;
+  animation: fadeInAnimation ease 1s forwards, gentleFloat 4s ease-in-out 1.5s infinite;
 }
 
 #art {
@@ -304,7 +386,8 @@ footer {
 }
 
 .works-item:hover {
-  transform: rotate(-3deg);
+  transform: rotate(-3deg) translateY(-4px);
+  box-shadow: 0 12px 30px rgba(45, 90, 90, 0.15);
   cursor: pointer;
   #in-progress {
     visibility: visible;

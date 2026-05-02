@@ -26,12 +26,14 @@
         border-radius: 15px;
         padding: 0.5rem;
         box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                    box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
         overflow: hidden;
       }
 
       .art-item:hover {
-        transform: translateY(-5px);
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.18);
       }
 
       .art-item img {
@@ -162,13 +164,12 @@
       <ul class="navbar-menu">
         <li><a class="navbar-item" href="./index.html" alt="Home">home</a></li>
         <li><a class="navbar-item" href="./index.html#projects" alt="Projects">technical work</a></li>
-        <li><a class="navbar-item" href="./art.html" alt="Art and animation">creative work</a></li>
       </ul>
     </nav>
 
     <main>
       <!-- YouTube Channel Section -->
-      <section class="youtube-section">
+      <section class="youtube-section reveal">
         <h2>YouTube Channel ･ﾟ'✧｡</h2>
         <div class="youtube-container">
       
@@ -186,7 +187,7 @@
       </section>
 
             <!-- Writing Section -->
-      <section class="writing-section">
+      <section class="writing-section reveal">
         <h2>Writing ･ﾟ'✧｡</h2>
         <div class="writing-container">
          <p>Samples of my writing!</p>
@@ -197,22 +198,22 @@
 
 
       <!-- Traditional Art Section -->
-      <section class="art-section">
+      <section class="art-section reveal">
         <h2>Traditional Art ･ﾟ'✧｡</h2>
-        <div class="art-gallery">
-          <div class="art-item">
+        <div class="art-gallery stagger-children">
+          <div class="art-item reveal" style="--stagger-index: 0;">
             <img src="./IMG_7025.jpg" alt="Traditional artwork - vertical piece" />
           </div>
-          <div class="art-item">
+          <div class="art-item reveal" style="--stagger-index: 1;">
             <img src="./IMG_7027.jpg" alt="Traditional artwork - vertical piece" />
           </div>
-          <div class="art-item">
+          <div class="art-item reveal" style="--stagger-index: 2;">
             <img src="./IMG_7026.jpg" alt="Traditional artwork - horizontal piece" />
           </div>
-          <div class="art-item">
+          <div class="art-item reveal" style="--stagger-index: 3;">
             <img src="./IMG_7028.jpg" alt="Traditional artwork - horizontal piece" />
           </div>
-          <div class="art-item">
+          <div class="art-item reveal" style="--stagger-index: 4;">
             <img src="./IMG_7030.jpg" alt="Traditional artwork - horizontal piece" />
           </div>
         </div>
@@ -222,10 +223,35 @@
       
     </main>
 
-    <footer>
-  
+    <footer class="reveal">
+
       <p>background image from Howl's Moving Castle</p>
     </footer>
+
+    <script>
+      (function () {
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReducedMotion) {
+          document.querySelectorAll('.reveal').forEach(function (el) {
+            el.classList.add('visible');
+          });
+          return;
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(function (el) {
+          observer.observe(el);
+        });
+      })();
+    </script>
 
   </body>
 </html>
