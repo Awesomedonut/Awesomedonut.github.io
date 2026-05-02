@@ -5,101 +5,54 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="./favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jin Glebell</title>
+    <title>Jin Song</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
     <style>
-      /* ═══════════════════════════════════════
-         Design Tokens
-         ═══════════════════════════════════════ */
+      /* ═══ Design Tokens ═══ */
       :root {
         --font-display: 'DM Serif Display', Georgia, serif;
         --font-body: 'Inter', -apple-system, system-ui, sans-serif;
         --font-mono: 'JetBrains Mono', ui-monospace, monospace;
-
-        --bg: #faf9f7;
-        --fg: #1a1a1a;
-        --fg-muted: #5c5c5c;
-        --fg-subtle: #999;
-        --accent: #2d5a5a;
-        --accent-hover: #1a3d3d;
+        --bg: #faf9f7; --fg: #1a1a1a; --fg-muted: #5c5c5c; --fg-subtle: #999;
+        --accent: #2d5a5a; --accent-hover: #1a3d3d;
         --border: rgba(0, 0, 0, 0.08);
         --card-bg: rgba(255, 255, 255, 0.7);
         --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.08);
-
         --ease: cubic-bezier(0.22, 1, 0.36, 1);
-        --duration: 0.7s;
-        --duration-fast: 0.3s;
-
-        --max-width: 1060px;
-        --pad: clamp(1.25rem, 5vw, 4rem);
-
-        --shell-bg: #e8e6e1;
-        --chrome-bg: #ededeb;
-        --chrome-border: rgba(0, 0, 0, 0.08);
-        --chrome-hover: rgba(0, 0, 0, 0.05);
+        --duration: 0.7s; --duration-fast: 0.3s;
+        --max-width: 1060px; --pad: clamp(1.25rem, 5vw, 4rem);
+        --shell-bg: #e8e6e1; --chrome-bg: #ededeb;
+        --chrome-border: rgba(0, 0, 0, 0.08); --chrome-hover: rgba(0, 0, 0, 0.05);
         --url-bg: #eeeee9;
       }
 
-      /* ═══════════════════════════════════════
-         Reset
-         ═══════════════════════════════════════ */
+      /* ═══ Reset ═══ */
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-      body {
-        font-family: var(--font-body);
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 1.6;
-        color: var(--fg);
-        background: var(--shell-bg);
-        overflow-x: hidden;
-      }
+      html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+      body { font-family: var(--font-body); font-weight: 400; font-size: 16px; line-height: 1.6; color: var(--fg); background: var(--shell-bg); overflow-x: hidden; }
       img { display: block; max-width: 100%; }
       a { color: inherit; text-decoration: none; }
       ul, ol { list-style: none; }
 
-      /* ═══════════════════════════════════════
-         Reveal Animations
-         ═══════════════════════════════════════ */
-      .reveal {
-        opacity: 0;
-        transform: translateY(28px);
-        transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease);
-      }
+      /* ═══ Reveal ═══ */
+      .reveal { opacity: 0; transform: translateY(28px); transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease); }
       .reveal.visible { opacity: 1; transform: translateY(0); }
-      @media (prefers-reduced-motion: reduce) {
-        .reveal { opacity: 1; transform: none; transition: none; }
-      }
+      @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 
-      /* ═══════════════════════════════════════
-         Browser Shell
-         ═══════════════════════════════════════ */
+      /* ═══ Browser Shell ═══ */
       .browser-shell {
-        display: flex;
-        flex-direction: column;
-        width: 94%;
-        max-width: 1200px;
-        height: 92vh;
-        min-height: 560px;
-        margin: 4vh auto;
-        border-radius: 12px;
-        overflow: hidden;
+        display: flex; flex-direction: column; width: 94%; max-width: 1200px;
+        height: 92vh; min-height: 560px; margin: 4vh auto; border-radius: 12px; overflow: hidden;
         box-shadow: 0 25px 60px rgba(0,0,0,0.12), 0 8px 24px rgba(0,0,0,0.06), 0 0 0 1px rgba(0,0,0,0.06);
-        background: var(--bg);
-        font-family: var(--font-body);
+        background: var(--bg); font-family: var(--font-body);
       }
 
       /* Title Bar */
       .shell-title-bar {
-        display: flex;
-        align-items: center;
-        background: var(--chrome-bg);
-        height: 42px;
-        user-select: none;
-        border-bottom: 1px solid var(--chrome-border);
-        flex-shrink: 0;
+        display: flex; align-items: center; background: var(--chrome-bg);
+        height: 42px; user-select: none; border-bottom: 1px solid var(--chrome-border); flex-shrink: 0;
       }
       .shell-traffic-lights { display: flex; gap: 8px; padding: 0 16px; flex-shrink: 0; }
       .shell-light { width: 12px; height: 12px; border-radius: 50%; cursor: default; }
@@ -108,14 +61,24 @@
       .shell-light.maximize { background: #28c840; }
 
       /* Tabs */
-      .shell-tab-bar { display: flex; align-items: flex-end; gap: 2px; flex: 1; height: 100%; padding-right: 8px; }
+      .shell-tab-bar { display: flex; align-items: flex-end; gap: 1px; flex: 1; height: 100%; padding-right: 8px; overflow-x: auto; }
       .shell-tab {
-        display: flex; align-items: center; height: 34px; padding: 0 16px; margin-top: auto;
+        display: flex; align-items: center; height: 34px; padding: 0 18px; margin-top: auto;
         border-radius: 8px 8px 0 0; background: transparent; color: #888;
-        font-size: 12px; font-weight: 500; letter-spacing: 0.01em; cursor: default;
-        max-width: 240px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        font-size: 12px; font-weight: 500; letter-spacing: 0.01em; cursor: pointer;
+        white-space: nowrap; transition: background 0.15s, color 0.15s;
+        border: none; font-family: var(--font-body);
       }
+      .shell-tab:hover { background: rgba(0,0,0,0.03); color: #666; }
       .shell-tab.active { background: var(--bg); color: var(--fg); }
+      .shell-tab.active:hover { background: var(--bg); }
+      .shell-tab .tab-close {
+        display: none; align-items: center; justify-content: center;
+        width: 16px; height: 16px; border: none; background: none; color: #999;
+        cursor: pointer; border-radius: 4px; margin-left: 6px; padding: 0; flex-shrink: 0;
+      }
+      .shell-tab:hover .tab-close { display: flex; }
+      .shell-tab .tab-close:hover { background: rgba(0,0,0,0.08); color: #555; }
       .shell-new-tab {
         display: flex; align-items: center; justify-content: center;
         width: 26px; height: 26px; border: none; background: none; color: #999;
@@ -143,7 +106,7 @@
         background: var(--url-bg); border-radius: 8px; padding: 0 12px; gap: 8px;
       }
       .shell-url-icon { color: #28c840; flex-shrink: 0; }
-      .shell-url-text { flex: 1; font-size: 12.5px; font-family: var(--font-body); color: var(--fg-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .shell-url-text { flex: 1; font-size: 12.5px; font-family: var(--font-body); color: var(--fg-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; transition: opacity 0.2s; }
 
       /* Bookmarks */
       .shell-bookmarks {
@@ -158,51 +121,49 @@
       }
       .shell-bookmark:hover { background: var(--chrome-hover); color: #555; }
 
-      /* Content Area */
-      .shell-content { flex: 1; overflow-y: auto; overflow-x: hidden; background: var(--bg); }
+      /* Share */
+      .share-wrapper { position: relative; }
+      .share-popover {
+        display: none; position: absolute; top: 38px; right: 0; z-index: 20;
+        background: #fff; border: 1px solid var(--chrome-border); border-radius: 10px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12); padding: 6px; min-width: 170px;
+        animation: popIn 0.15s var(--ease);
+      }
+      .share-popover.open { display: flex; flex-direction: column; }
+      @keyframes popIn { from { opacity: 0; transform: translateY(-4px) scale(0.97); } to { opacity: 1; transform: translateY(0) scale(1); } }
+      .share-option {
+        display: flex; align-items: center; gap: 10px; padding: 8px 12px;
+        font-family: var(--font-body); font-size: 13px; color: var(--fg); border: none;
+        background: none; border-radius: 6px; cursor: pointer; text-decoration: none; transition: background 0.12s;
+      }
+      .share-option:hover { background: rgba(0,0,0,0.04); }
+      .share-option svg { flex-shrink: 0; color: var(--fg-muted); }
+      .share-copied { color: var(--accent) !important; }
+
+      /* ═══ Tab Pages ═══ */
+      .shell-content { flex: 1; overflow-y: auto; overflow-x: hidden; background: var(--bg); position: relative; }
       .shell-content::-webkit-scrollbar { width: 7px; }
       .shell-content::-webkit-scrollbar-track { background: transparent; }
       .shell-content::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 4px; }
       .shell-content::-webkit-scrollbar-thumb:hover { background: rgba(0,0,0,0.2); }
 
-      /* ═══════════════════════════════════════
-         Portfolio Nav
-         ═══════════════════════════════════════ */
-      .nav {
-        position: sticky; top: 0; z-index: 10;
-        padding: 1.25rem var(--pad); display: flex; align-items: center; justify-content: space-between;
-        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-        background: rgba(250, 249, 247, 0.8); border-bottom: 1px solid var(--border);
+      .tab-page {
+        display: none; min-height: 100%;
+        animation: fadeTab 0.35s var(--ease);
       }
-      .nav-name { font-family: var(--font-display); font-size: 1.25rem; letter-spacing: -0.01em; color: var(--fg); }
-      .nav-links { display: flex; gap: 2rem; }
-      .nav-link {
-        font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em;
-        text-transform: uppercase; color: var(--fg-muted); position: relative;
-        transition: color var(--duration-fast) var(--ease);
-      }
-      .nav-link::after {
-        content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
-        background: var(--accent); transition: width var(--duration-fast) var(--ease);
-      }
-      .nav-link:hover { color: var(--fg); }
-      .nav-link:hover::after { width: 100%; }
+      .tab-page.active { display: block; }
+      @keyframes fadeTab { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
-      /* ═══════════════════════════════════════
-         Container
-         ═══════════════════════════════════════ */
-      .container { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--pad); }
+      .page-inner { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--pad); }
 
-      /* ═══════════════════════════════════════
-         Hero
-         ═══════════════════════════════════════ */
-      .hero { min-height: 80vh; display: flex; align-items: center; padding-top: 3rem; padding-bottom: 2rem; }
-      .hero-inner { display: grid; grid-template-columns: 1fr 0.55fr; gap: clamp(2rem, 6vw, 5rem); align-items: center; width: 100%; }
-      .hero-text { display: flex; flex-direction: column; gap: 1.5rem; }
+      /* ═══ Hero ═══ */
+      .hero { min-height: 100%; display: flex; align-items: center; justify-content: center; padding: 4rem 0; }
+      .hero-inner { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; max-width: 680px; margin: 0 auto; }
+      .hero-text { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
       .hero-eyebrow { font-family: var(--font-mono); font-size: 0.7rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
       .hero-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.75rem, 5.5vw, 4.25rem); line-height: 1.08; letter-spacing: -0.025em; color: var(--fg); }
       .hero-title em { font-style: italic; color: var(--accent); }
-      .hero-sub { font-size: clamp(1rem, 1.8vw, 1.15rem); font-weight: 300; line-height: 1.65; color: var(--fg-muted); max-width: 480px; }
+      .hero-sub { font-size: clamp(1rem, 1.8vw, 1.15rem); font-weight: 300; line-height: 1.65; color: var(--fg-muted); max-width: 480px; text-align: center; }
       .hero-cta-row { display: flex; gap: 1rem; align-items: center; padding-top: 0.5rem; }
 
       .btn-primary {
@@ -221,28 +182,14 @@
       }
       .btn-ghost:hover { border-color: var(--fg-muted); transform: translateY(-1px); }
 
-      .hero-img-wrap { position: relative; display: flex; justify-content: center; }
-      .hero-img { width: 100%; max-width: 340px; border-radius: 12px; object-fit: cover; aspect-ratio: 3 / 4; filter: grayscale(0.1) contrast(1.02); }
-      .hero-img-badge {
-        position: absolute; bottom: -12px; right: -8px; background: var(--bg);
-        border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 0.85rem;
-        font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.08em;
-        text-transform: uppercase; color: var(--accent); white-space: nowrap;
-      }
-
-      /* ═══════════════════════════════════════
-         Sections
-         ═══════════════════════════════════════ */
-      .section { padding: clamp(4rem, 10vw, 7rem) 0; }
-      .section + .section { border-top: 1px solid var(--border); }
+      /* ═══ Sections ═══ */
+      .section { padding: clamp(3rem, 8vw, 5rem) 0; }
       .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: clamp(2rem, 4vw, 3rem); gap: 1rem; flex-wrap: wrap; }
       .section-eyebrow { font-family: var(--font-mono); font-size: 0.65rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--fg-subtle); }
       .section-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.75rem, 3.5vw, 2.25rem); letter-spacing: -0.02em; line-height: 1.15; }
       .section-count { font-family: var(--font-mono); font-size: 0.7rem; color: var(--fg-subtle); letter-spacing: 0.06em; }
 
-      /* ═══════════════════════════════════════
-         Project Cards
-         ═══════════════════════════════════════ */
+      /* ═══ Project Cards ═══ */
       .projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
       .project-card {
         position: relative; display: flex; flex-direction: column; background: var(--card-bg);
@@ -250,9 +197,6 @@
         transition: transform var(--duration-fast) var(--ease), box-shadow var(--duration-fast) var(--ease), border-color var(--duration-fast) var(--ease);
       }
       .project-card:hover { transform: translateY(-4px); box-shadow: var(--card-shadow-hover); border-color: rgba(0,0,0,0.12); }
-      .project-card-img-wrap { overflow: hidden; }
-      .project-card-img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; transition: transform 0.5s var(--ease); }
-      .project-card:hover .project-card-img { transform: scale(1.03); }
       .project-card-body { padding: 1.25rem 1.5rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
       .project-card-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
       .project-tag {
@@ -268,9 +212,7 @@
       }
       .project-card:hover .project-card-arrow { color: var(--accent); gap: 0.7rem; }
 
-      /* ═══════════════════════════════════════
-         Experience
-         ═══════════════════════════════════════ */
+      /* ═══ Experience ═══ */
       .experience-list { display: flex; flex-direction: column; }
       .experience-item {
         display: grid; grid-template-columns: 140px 1fr; gap: 2rem; padding: 1.5rem 0;
@@ -289,12 +231,10 @@
       }
       .experience-badge-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
-      /* ═══════════════════════════════════════
-         Contact
-         ═══════════════════════════════════════ */
-      .contact {
-        padding: clamp(4rem, 10vw, 7rem) 0; border-top: 1px solid var(--border);
-        text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.25rem;
+      /* ═══ Contact ═══ */
+      .contact-page {
+        min-height: 100%; display: flex; flex-direction: column; align-items: center;
+        justify-content: center; text-align: center; gap: 1.25rem; padding: 4rem var(--pad);
       }
       .contact-title { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -0.02em; line-height: 1.1; }
       .contact-sub { font-size: 1rem; color: var(--fg-muted); max-width: 400px; line-height: 1.6; }
@@ -313,42 +253,49 @@
       .social-link:hover { color: var(--fg); border-color: var(--fg-muted); transform: translateY(-2px); }
       .social-link svg { width: 18px; height: 18px; }
 
-      /* ═══════════════════════════════════════
-         Footer
-         ═══════════════════════════════════════ */
-      .footer {
+      /* ═══ Easter Egg Page ═══ */
+      .egg-page {
+        min-height: 100%; display: flex; flex-direction: column;
+        align-items: center; justify-content: center; text-align: center;
+        padding: 4rem var(--pad); gap: 1.5rem;
+      }
+      .egg-icon { font-size: 3rem; line-height: 1; }
+      .egg-text {
+        font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem);
+        letter-spacing: -0.02em; line-height: 1.3; max-width: 500px; color: var(--fg);
+      }
+      .egg-sub {
+        font-size: 0.875rem; color: var(--fg-subtle); max-width: 400px; line-height: 1.6;
+        font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em;
+      }
+      .egg-ascii {
+        font-family: var(--font-mono); font-size: 0.6rem; line-height: 1.2;
+        color: var(--accent); white-space: pre; opacity: 0.7;
+      }
+
+      /* ═══ Footer ═══ */
+      .page-footer {
         padding: 2rem var(--pad); border-top: 1px solid var(--border);
         display: flex; align-items: center; justify-content: space-between;
         font-size: 0.75rem; color: var(--fg-subtle);
       }
       .footer-right { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.06em; }
 
-      /* ═══════════════════════════════════════
-         Responsive
-         ═══════════════════════════════════════ */
+      /* ═══ Responsive ═══ */
       @media screen and (max-width: 768px) {
         .browser-shell { width: 100%; height: 100vh; margin: 0; border-radius: 0; box-shadow: none; }
         .shell-bookmarks { display: none; }
         .shell-nav-actions { display: none; }
-
-        .hero-inner { grid-template-columns: 1fr; text-align: center; }
-        .hero-text { align-items: center; order: 2; }
+        .shell-tab { padding: 0 12px; font-size: 11px; }
         .hero-sub { max-width: 100%; }
-        .hero-cta-row { justify-content: center; }
-        .hero-img-wrap { order: 1; }
-        .hero-img { max-width: 200px; aspect-ratio: 1; border-radius: 50%; }
-        .hero-img-badge { bottom: 0; right: calc(50% - 100px); }
-
         .projects-grid { grid-template-columns: 1fr; }
         .section-header { flex-direction: column; gap: 0.5rem; }
         .experience-item { grid-template-columns: 1fr; gap: 0.35rem; }
-        .nav-links { gap: 1.25rem; }
-        .footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+        .page-footer { flex-direction: column; gap: 0.5rem; text-align: center; }
       }
     </style>
   </head>
   <body>
-    <!-- ═══ Browser Shell ═══ -->
     <div class="browser-shell">
       <!-- Title bar -->
       <div class="shell-title-bar">
@@ -358,8 +305,11 @@
           <span class="shell-light maximize"></span>
         </div>
         <div class="shell-tab-bar">
-          <div class="shell-tab active">Jin Glebell — Portfolio</div>
-          <button class="shell-new-tab" aria-label="New tab">
+          <button class="shell-tab active" data-tab="home">Jin Song</button>
+          <button class="shell-tab" data-tab="work">Work</button>
+          <button class="shell-tab" data-tab="experience">Experience</button>
+          <button class="shell-tab" data-tab="contact">Contact</button>
+          <button class="shell-new-tab" id="new-tab-btn" aria-label="New tab">
             <svg width="11" height="11" viewBox="0 0 12 12"><path d="M6 1v10M1 6h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" /></svg>
           </button>
         </div>
@@ -368,228 +318,166 @@
       <!-- Nav bar -->
       <div class="shell-nav-bar">
         <div class="shell-nav-controls">
-          <button class="shell-nav-btn" aria-label="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6" /></svg></button>
-          <button class="shell-nav-btn" aria-label="Forward"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6" /></svg></button>
+          <button class="shell-nav-btn" id="back-btn" aria-label="Back"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6" /></svg></button>
+          <button class="shell-nav-btn" id="fwd-btn" aria-label="Forward"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6" /></svg></button>
           <button class="shell-nav-btn" aria-label="Reload"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /></svg></button>
         </div>
         <div class="shell-url-bar">
           <svg class="shell-url-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-          <span class="shell-url-text">jinglebell.dev</span>
+          <span class="shell-url-text" id="url-text">whyjs.com</span>
         </div>
         <div class="shell-nav-actions">
-          <button class="shell-nav-btn" aria-label="Share"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" /></svg></button>
-          <button class="shell-nav-btn" aria-label="Menu"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1" /><circle cx="12" cy="5" r="1" /><circle cx="12" cy="19" r="1" /></svg></button>
+          <div class="share-wrapper">
+            <button class="shell-nav-btn" aria-label="Share" id="share-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" /></svg></button>
+            <div class="share-popover" id="share-popover">
+              <button class="share-option" id="share-copy">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <span>Copy link</span>
+              </button>
+              <a class="share-option" id="share-email" href="" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Email</span>
+              </a>
+              <a class="share-option" id="share-linkedin" href="" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a class="share-option" id="share-x" href="" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>X / Twitter</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Bookmarks -->
       <div class="shell-bookmarks">
-        <a href="#top" class="shell-bookmark">
+        <a href="https://github.com/Awesomedonut" target="_blank" class="shell-bookmark">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
-          Portfolio
+          GitHub
         </a>
-        <a href="https://github.com/Awesomedonut" target="_blank" class="shell-bookmark">GitHub</a>
         <a href="https://www.linkedin.com/in/jin-glebell/" target="_blank" class="shell-bookmark">LinkedIn</a>
         <a href="https://the-peak.ca/tag/jin-song/" target="_blank" class="shell-bookmark">The Peak</a>
         <a href="https://www.youtube.com/@jin_glebell" target="_blank" class="shell-bookmark">YouTube</a>
       </div>
 
-      <!-- ═══ Page Content ═══ -->
+      <!-- ═══ Tab Pages ═══ -->
       <div class="shell-content">
-        <nav class="nav">
-          <a href="#top" class="nav-name">Jin Glebell</a>
-          <div class="nav-links">
-            <a href="#work" class="nav-link">Work</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#contact" class="nav-link">Contact</a>
+
+        <!-- HOME -->
+        <div class="tab-page active" id="page-home">
+          <div class="page-inner">
+            <section class="hero">
+              <div class="hero-inner">
+                <div class="hero-text">
+                  <div class="reveal"><span class="hero-eyebrow">Software Developer + Artist</span></div>
+                  <div class="reveal" style="transition-delay: 80ms;">
+                    <h1 class="hero-title">
+                      I build things at the<br>
+                      intersection of <em>art</em><br>
+                      and <em>technology</em>
+                    </h1>
+                  </div>
+                  <div class="reveal" style="transition-delay: 160ms;">
+                    <p class="hero-sub">
+                      Writer, developer, and aspiring animation studio founder.
+                      I love combining creative thinking with engineering
+                      to build experiences that feel alive.
+                    </p>
+                  </div>
+                  <div class="reveal" style="transition-delay: 240ms;">
+                    <div class="hero-cta-row">
+                      <button class="btn-primary" data-goto="work">View projects &#8595;</button>
+                      <button class="btn-ghost" data-goto="contact">Get in touch</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-        </nav>
+          <footer class="page-footer page-inner">
+            <span>Jin Song &copy; 2026</span>
+            <span class="footer-right">Built with care</span>
+          </footer>
+        </div>
 
-        <main class="container">
-          <!-- Hero -->
-          <section class="hero" id="top">
-            <div class="hero-inner">
-              <div class="hero-text">
-                <div class="reveal"><span class="hero-eyebrow">Software Developer + Artist</span></div>
-                <div class="reveal" style="transition-delay: 80ms;">
-                  <h1 class="hero-title">
-                    I build things at the<br>
-                    intersection of <em>art</em><br>
-                    and <em>technology</em>
-                  </h1>
-                </div>
-                <div class="reveal" style="transition-delay: 160ms;">
-                  <p class="hero-sub">
-                    Writer, developer, and aspiring animation studio founder.
-                    I love combining creative thinking with engineering
-                    to build experiences that feel alive.
-                  </p>
-                </div>
-                <div class="reveal" style="transition-delay: 240ms;">
-                  <div class="hero-cta-row">
-                    <a href="#work" class="btn-primary">View projects &#8595;</a>
-                    <a href="#contact" class="btn-ghost">Get in touch</a>
+        <!-- WORK -->
+        <div class="tab-page" id="page-work">
+          <div class="page-inner">
+            <section class="section">
+              <div class="reveal">
+                <div class="section-header">
+                  <div>
+                    <span class="section-eyebrow">Selected Work</span>
+                    <h2 class="section-title">Projects</h2>
                   </div>
+                  <span class="section-count">02 projects</span>
                 </div>
               </div>
-              <div class="reveal" style="transition-delay: 200ms;">
-                <div class="hero-img-wrap">
-                  <img class="hero-img" src="./pfp.png" alt="Jin Glebell" />
-                  <span class="hero-img-badge">Open to work</span>
+              <div class="projects-grid">
+                <div class="reveal" style="transition-delay: 0ms;">
+                  <a href="https://thecdm.ca/projects/falling-skies-25-ubc-alive-research-lab" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <div class="project-card-body">
+                      <div class="project-card-tags"><span class="project-tag">Client Work</span><span class="project-tag">Game Dev</span><span class="project-tag">Dashboard</span></div>
+                      <h3 class="project-card-title">Falling Skies</h3>
+                      <p class="project-card-desc">Educational iPad game built with a UBC research lab, plus a web dashboard displaying live gameplay data.</p>
+                      <span class="project-card-arrow">View project &rarr;</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="reveal" style="transition-delay: 100ms;">
+                  <a href="https://sites.google.com/view/cmpt362cooksmart/home" target="_blank" rel="noopener noreferrer" class="project-card">
+                    <div class="project-card-body">
+                      <div class="project-card-tags"><span class="project-tag">AI/ML</span><span class="project-tag">Mobile</span><span class="project-tag">Multimodal</span></div>
+                      <h3 class="project-card-title">CookSmart</h3>
+                      <p class="project-card-desc">Multimedia AI app that generates recipes from text, image, and audio input.</p>
+                      <span class="project-card-arrow">View project &rarr;</span>
+                    </div>
+                  </a>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
+          <footer class="page-footer page-inner">
+            <span>Jin Song &copy; 2026</span>
+            <span class="footer-right">Built with care</span>
+          </footer>
+        </div>
 
-          <!-- Projects -->
-          <section class="section" id="work">
-            <div class="reveal">
-              <div class="section-header">
-                <div>
-                  <span class="section-eyebrow">Selected Work</span>
-                  <h2 class="section-title">Projects</h2>
+        <!-- EXPERIENCE -->
+        <div class="tab-page" id="page-experience">
+          <div class="page-inner">
+            <section class="section">
+              <div class="reveal">
+                <div class="section-header">
+                  <div>
+                    <span class="section-eyebrow">Background</span>
+                    <h2 class="section-title">Experience</h2>
+                  </div>
                 </div>
-                <span class="section-count">04 projects</span>
               </div>
-            </div>
-            <div class="projects-grid">
-              <div class="reveal" style="transition-delay: 0ms;">
-                <a href="https://thecdm.ca/projects/falling-skies-25-ubc-alive-research-lab" target="_blank" rel="noopener noreferrer" class="project-card">
-                  <div class="project-card-img-wrap"><img class="project-card-img" src="./Printable1.jpg" alt="Falling Skies" /></div>
-                  <div class="project-card-body">
-                    <div class="project-card-tags"><span class="project-tag">Client Work</span><span class="project-tag">Game Dev</span><span class="project-tag">Dashboard</span></div>
-                    <h3 class="project-card-title">Falling Skies</h3>
-                    <p class="project-card-desc">Educational iPad game built with a UBC research lab, plus a web dashboard displaying live gameplay data.</p>
-                    <span class="project-card-arrow">View project &rarr;</span>
-                  </div>
-                </a>
+              <div class="experience-list">
+                <div class="reveal" style="transition-delay: 0ms;"><div class="experience-item"><span class="experience-date">Current</span><div class="experience-content"><span class="experience-role">Software Engineering Intern</span><span class="experience-company">Tap n Tell AI</span><span class="experience-badge"><span class="experience-badge-dot"></span> Current</span></div></div></div>
+                <div class="reveal" style="transition-delay: 60ms;"><div class="experience-item"><span class="experience-date">Current</span><div class="experience-content"><span class="experience-role">Software Engineering Contractor</span><span class="experience-company">iTOTEM Analytics</span><span class="experience-badge"><span class="experience-badge-dot"></span> Current</span></div></div></div>
+                <div class="reveal" style="transition-delay: 120ms;"><div class="experience-item"><span class="experience-date">2025</span><div class="experience-content"><span class="experience-role">Volunteer</span><span class="experience-company">SIGGRAPH 2025</span></div></div></div>
+                <div class="reveal" style="transition-delay: 180ms;"><div class="experience-item"><span class="experience-date">2024</span><div class="experience-content"><span class="experience-role">Software Engineering Intern</span><span class="experience-company">Cryptoslam</span></div></div></div>
+                <div class="reveal" style="transition-delay: 240ms;"><div class="experience-item"><span class="experience-date">2024</span><div class="experience-content"><span class="experience-role">Associate Writer</span><span class="experience-company">The Peak, SFU Student Newspaper</span></div></div></div>
+                <div class="reveal" style="transition-delay: 300ms;"><div class="experience-item"><span class="experience-date">2023</span><div class="experience-content"><span class="experience-role">Software Engineering Intern</span><span class="experience-company">Cictan</span></div></div></div>
+                <div class="reveal" style="transition-delay: 360ms;"><div class="experience-item"><span class="experience-date">2023</span><div class="experience-content"><span class="experience-role">HIVE Leader</span><span class="experience-company">Faculty of Applied Science, SFU</span></div></div></div>
+                <div class="reveal" style="transition-delay: 420ms;"><div class="experience-item"><span class="experience-date">2022–23</span><div class="experience-content"><span class="experience-role">Asst. Director of Events &rarr; First Year Rep</span><span class="experience-company">Computing Science Student Society</span></div></div></div>
               </div>
-              <div class="reveal" style="transition-delay: 100ms;">
-                <a href="https://sites.google.com/view/cmpt362cooksmart/home" target="_blank" rel="noopener noreferrer" class="project-card">
-                  <div class="project-card-img-wrap"><img class="project-card-img" src="./cooksmart2.png" alt="CookSmart" /></div>
-                  <div class="project-card-body">
-                    <div class="project-card-tags"><span class="project-tag">AI/ML</span><span class="project-tag">Mobile</span><span class="project-tag">Multimodal</span></div>
-                    <h3 class="project-card-title">CookSmart</h3>
-                    <p class="project-card-desc">Multimedia AI app that generates recipes from text, image, and audio input.</p>
-                    <span class="project-card-arrow">View project &rarr;</span>
-                  </div>
-                </a>
-              </div>
-              <div class="reveal" style="transition-delay: 200ms;">
-                <a href="https://github.com/Awesomedonut/Practice-Problem-Generator" target="_blank" rel="noopener noreferrer" class="project-card">
-                  <div class="project-card-img-wrap"><img class="project-card-img" src="./probloom.png" alt="ProBloom" /></div>
-                  <div class="project-card-body">
-                    <div class="project-card-tags"><span class="project-tag">AI</span><span class="project-tag">EdTech</span><span class="project-tag">Full Stack</span></div>
-                    <h3 class="project-card-title">ProBloom</h3>
-                    <p class="project-card-desc">AI web app generating practice problems and auto-grading student answers across question formats.</p>
-                    <span class="project-card-arrow">View project &rarr;</span>
-                  </div>
-                </a>
-              </div>
-              <div class="reveal" style="transition-delay: 300ms;">
-                <a href="https://docs.google.com/presentation/d/1xvdoUYfw9DBAA-82ZlgMlVXCUApBvl633G8EC93c35I/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-card">
-                  <div class="project-card-img-wrap"><img class="project-card-img" src="./h2ohyeah.png" alt="H2O Yeah!" /></div>
-                  <div class="project-card-body">
-                    <div class="project-card-tags"><span class="project-tag">UI/UX</span><span class="project-tag">Prototype</span><span class="project-tag">Award Winner</span></div>
-                    <h3 class="project-card-title">H2O Yeah!</h3>
-                    <p class="project-card-desc">Water tracking app UI prototype. Won both Class Favourite and Teaching Team Favourite awards.</p>
-                    <span class="project-card-arrow">View project &rarr;</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </section>
+            </section>
+          </div>
+          <footer class="page-footer page-inner">
+            <span>Jin Song &copy; 2026</span>
+            <span class="footer-right">Built with care</span>
+          </footer>
+        </div>
 
-          <!-- Experience -->
-          <section class="section" id="experience">
-            <div class="reveal">
-              <div class="section-header">
-                <div>
-                  <span class="section-eyebrow">Background</span>
-                  <h2 class="section-title">Experience</h2>
-                </div>
-              </div>
-            </div>
-            <div class="experience-list">
-              <div class="reveal" style="transition-delay: 0ms;">
-                <div class="experience-item">
-                  <span class="experience-date">Current</span>
-                  <div class="experience-content">
-                    <span class="experience-role">Software Engineering Intern</span>
-                    <span class="experience-company">Tap n Tell AI</span>
-                    <span class="experience-badge"><span class="experience-badge-dot"></span> Current</span>
-                  </div>
-                </div>
-              </div>
-              <div class="reveal" style="transition-delay: 60ms;">
-                <div class="experience-item">
-                  <span class="experience-date">Current</span>
-                  <div class="experience-content">
-                    <span class="experience-role">Software Engineering Contractor</span>
-                    <span class="experience-company">iTOTEM Analytics</span>
-                    <span class="experience-badge"><span class="experience-badge-dot"></span> Current</span>
-                  </div>
-                </div>
-              </div>
-              <div class="reveal" style="transition-delay: 120ms;">
-                <div class="experience-item">
-                  <span class="experience-date">2025</span>
-                  <div class="experience-content">
-                    <span class="experience-role">Volunteer</span>
-                    <span class="experience-company">SIGGRAPH 2025</span>
-                  </div>
-                </div>
-              </div>
-              <div class="reveal" style="transition-delay: 180ms;">
-                <div class="experience-item">
-                  <span class="experience-date">2024</span>
-                  <div class="experience-content">
-                    <span class="experience-role">Software Engineering Intern</span>
-                    <span class="experience-company">Cryptoslam</span>
-                  </div>
-                </div>
-              </div>
-              <div class="reveal" style="transition-delay: 240ms;">
-                <div class="experience-item">
-                  <span class="experience-date">2024</span>
-                  <div class="experience-content">
-                    <span class="experience-role">Associate Writer</span>
-                    <span class="experience-company">The Peak, SFU Student Newspaper</span>
-                  </div>
-                </div>
-              </div>
-              <div class="reveal" style="transition-delay: 300ms;">
-                <div class="experience-item">
-                  <span class="experience-date">2023</span>
-                  <div class="experience-content">
-                    <span class="experience-role">Software Engineering Intern</span>
-                    <span class="experience-company">Cictan</span>
-                  </div>
-                </div>
-              </div>
-              <div class="reveal" style="transition-delay: 360ms;">
-                <div class="experience-item">
-                  <span class="experience-date">2023</span>
-                  <div class="experience-content">
-                    <span class="experience-role">HIVE Leader</span>
-                    <span class="experience-company">Faculty of Applied Science, SFU</span>
-                  </div>
-                </div>
-              </div>
-              <div class="reveal" style="transition-delay: 420ms;">
-                <div class="experience-item">
-                  <span class="experience-date">2022–23</span>
-                  <div class="experience-content">
-                    <span class="experience-role">Asst. Director of Events &rarr; First Year Rep</span>
-                    <span class="experience-company">Computing Science Student Society</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- Contact -->
-          <section class="contact" id="contact">
+        <!-- CONTACT -->
+        <div class="tab-page" id="page-contact">
+          <div class="contact-page">
             <span class="section-eyebrow reveal">Get In Touch</span>
             <h2 class="contact-title reveal" style="transition-delay: 60ms;">Let's work together</h2>
             <p class="contact-sub reveal" style="transition-delay: 120ms;">
@@ -608,33 +496,194 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="2.5" x2="12" y2="14" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="5.64" y1="5.64" x2="18.36" y2="18.36" /><line x1="18.36" y1="5.64" x2="5.64" y2="18.36" /><rect x="10" y="14" width="4" height="8" fill="currentColor" stroke="none" rx="1" /></svg>
               </a>
             </div>
-          </section>
-        </main>
+          </div>
+        </div>
 
-        <footer class="footer container">
-          <span>Jin Glebell &copy; 2026</span>
-          <span class="footer-right">Built with care</span>
-        </footer>
       </div>
     </div>
 
     <script>
       (function () {
-        var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (reduced) {
-          document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
-          return;
-        }
-        var root = document.querySelector('.shell-content');
-        var observer = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              observer.unobserve(entry.target);
+        var tabs = document.querySelectorAll('.shell-tab');
+        var pages = document.querySelectorAll('.tab-page');
+        var urlText = document.getElementById('url-text');
+        var content = document.querySelector('.shell-content');
+        var history = ['home'];
+        var historyPos = 0;
+        var navigating = false;
+
+        var urls = {
+          home: 'whyjs.com',
+          work: 'whyjs.com/work',
+          experience: 'whyjs.com/experience',
+          contact: 'whyjs.com/contact'
+        };
+
+        function switchTab(name, addToHistory) {
+          tabs.forEach(function (t) { t.classList.toggle('active', t.dataset.tab === name); });
+          pages.forEach(function (p) {
+            var isActive = p.id === 'page-' + name;
+            p.classList.toggle('active', isActive);
+            // Re-trigger reveals for newly shown page
+            if (isActive) {
+              p.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
+                // Force reflow to restart animation
+                void el.offsetWidth;
+              });
             }
           });
-        }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px', root: root });
-        document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+          urlText.textContent = urls[name] || 'whyjs.com';
+          content.scrollTop = 0;
+
+          if (addToHistory !== false) {
+            // Trim forward history
+            history = history.slice(0, historyPos + 1);
+            history.push(name);
+            historyPos = history.length - 1;
+          }
+
+          // Run reveal observer for this page
+          runReveals(document.getElementById('page-' + name));
+        }
+
+        // Tab clicks
+        tabs.forEach(function (tab) {
+          tab.addEventListener('click', function () { switchTab(tab.dataset.tab); });
+        });
+
+        // CTA buttons that switch tabs
+        document.querySelectorAll('[data-goto]').forEach(function (btn) {
+          btn.addEventListener('click', function () { switchTab(btn.dataset.goto); });
+        });
+
+        // Back / Forward
+        document.getElementById('back-btn').addEventListener('click', function () {
+          if (historyPos > 0) { historyPos--; switchTab(history[historyPos], false); }
+        });
+        document.getElementById('fwd-btn').addEventListener('click', function () {
+          if (historyPos < history.length - 1) { historyPos++; switchTab(history[historyPos], false); }
+        });
+
+        // Reveal animations
+        function runReveals(container) {
+          var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (reduced) {
+            container.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
+            return;
+          }
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px', root: content });
+          container.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+        }
+
+        // Easter eggs for new tabs
+        var eggs = [
+          { icon: '&#127912;', text: 'My dream is to found my own animation studio one day.', sub: 'You found a secret!', url: 'whyjs.com/dreams' },
+          { icon: '&#9997;&#65039;', text: 'I write code, fiction, and nonfiction — sometimes all in the same day.', sub: 'Triple threat, honestly', url: 'whyjs.com/writing' },
+          { icon: '&#127836;', text: 'I once built an AI that generates recipes from photos of your fridge.', sub: 'It suggested cereal. The AI was right.', url: 'whyjs.com/snacks' },
+          { icon: '&#127752;', text: 'Art + technology aren\'t opposites. They\'re the same thing with different syntax.', sub: '— me, probably at 2am', url: 'whyjs.com/thoughts' },
+          { icon: '&#128075;', text: 'Hi! Thanks for being curious enough to click the +', sub: 'Curiosity is a great trait in a collaborator', url: 'whyjs.com/hello' },
+          { icon: '&#127916;', text: 'Howl\'s Moving Castle is the greatest film ever made. I will not elaborate.', sub: 'This is a hill I will live on', url: 'whyjs.com/hot-takes' },
+          { icon: '&#128187;', text: 'CSS is an art form and I genuinely mean that.', sub: 'Have you SEEN what people do with clip-path?', url: 'whyjs.com/css-is-art' },
+          { icon: '&#127775;', text: 'The best code is the code that makes someone smile.', sub: 'The second best code compiles on the first try', url: 'whyjs.com/wisdom' },
+          { ascii: '    /\\_/\\\n   ( o.o )\n    > ^ <\n   /|   |\\\n  (_|   |_)', text: 'You found the cat!', sub: 'Every good portfolio has a hidden cat', url: 'whyjs.com/meow' },
+          { ascii: '  \\o/\n   |\n  / \\', text: 'You\'re still clicking? I admire your dedication.', sub: 'Go ahead, open another one', url: 'whyjs.com/hi-again' },
+        ];
+        var tabCounter = 0;
+        var firstEgg = true;
+
+        document.getElementById('new-tab-btn').addEventListener('click', function () {
+          var egg;
+          if (firstEgg) {
+            egg = eggs[4]; // "Hi! Thanks for being curious enough to click the +"
+            firstEgg = false;
+          } else {
+            var pool = eggs.filter(function (_, i) { return i !== 4; });
+            egg = pool[Math.floor(Math.random() * pool.length)];
+          }
+          tabCounter++;
+          var tabId = 'egg-' + tabCounter;
+
+          // Create tab button
+          var tabBtn = document.createElement('button');
+          tabBtn.className = 'shell-tab';
+          tabBtn.dataset.tab = tabId;
+          tabBtn.innerHTML = (egg.ascii ? '&#128049;' : egg.icon) + ' <span style="margin-left:4px">Secret</span>' +
+            '<span class="tab-close" data-close="' + tabId + '">' +
+            '<svg width="8" height="8" viewBox="0 0 10 10"><path d="M1 1l8 8M9 1l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>';
+          var newTabBtn = document.getElementById('new-tab-btn');
+          newTabBtn.parentNode.insertBefore(tabBtn, newTabBtn);
+
+          // Create page
+          var page = document.createElement('div');
+          page.className = 'tab-page';
+          page.id = 'page-' + tabId;
+          page.innerHTML = '<div class="egg-page">' +
+            (egg.ascii ? '<pre class="egg-ascii">' + egg.ascii + '</pre>' : '<div class="egg-icon">' + egg.icon + '</div>') +
+            '<div class="egg-text">' + egg.text + '</div>' +
+            '<div class="egg-sub">' + egg.sub + '</div>' +
+            '</div>';
+          content.appendChild(page);
+
+          // Add to data
+          urls[tabId] = egg.url;
+          pages = document.querySelectorAll('.tab-page');
+
+          // Wire tab click
+          tabBtn.addEventListener('click', function (e) {
+            if (e.target.closest('.tab-close')) return;
+            switchTab(tabId);
+          });
+
+          // Wire close
+          tabBtn.querySelector('.tab-close').addEventListener('click', function (e) {
+            e.stopPropagation();
+            var wasActive = tabBtn.classList.contains('active');
+            tabBtn.remove();
+            page.remove();
+            pages = document.querySelectorAll('.tab-page');
+            if (wasActive) switchTab('home');
+          });
+
+          switchTab(tabId);
+        });
+
+        // Init reveals for home page
+        runReveals(document.getElementById('page-home'));
+
+        // Share
+        var shareUrl = 'https://whyjs.com';
+        var shareTitle = 'Jin Song — Portfolio';
+        var shareBtn = document.getElementById('share-btn');
+        var popover = document.getElementById('share-popover');
+        var copyBtn = document.getElementById('share-copy');
+
+        document.getElementById('share-email').href = 'mailto:?subject=' + encodeURIComponent(shareTitle) + '&body=' + encodeURIComponent('Check out this portfolio: ' + shareUrl);
+        document.getElementById('share-linkedin').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(shareUrl);
+        document.getElementById('share-x').href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(shareTitle) + '&url=' + encodeURIComponent(shareUrl);
+
+        shareBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          if (navigator.share && window.innerWidth < 768) { navigator.share({ title: shareTitle, url: shareUrl }); return; }
+          popover.classList.toggle('open');
+        });
+        copyBtn.addEventListener('click', function () {
+          navigator.clipboard.writeText(shareUrl).then(function () {
+            var label = copyBtn.querySelector('span');
+            label.textContent = 'Copied!';
+            copyBtn.classList.add('share-copied');
+            setTimeout(function () { label.textContent = 'Copy link'; copyBtn.classList.remove('share-copied'); }, 1500);
+          });
+        });
+        document.addEventListener('click', function (e) {
+          if (!popover.contains(e.target) && e.target !== shareBtn) popover.classList.remove('open');
+        });
       })();
     </script>
   </body>
