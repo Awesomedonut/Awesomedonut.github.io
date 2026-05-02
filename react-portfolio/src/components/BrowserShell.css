@@ -1,0 +1,290 @@
+/* ─── Browser Shell ─── */
+.browser-shell {
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  max-width: 1200px;
+  height: 92vh;
+  min-height: 560px;
+  margin: 4vh auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.12),
+    0 8px 24px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(0, 0, 0, 0.06);
+  background: var(--bg);
+  font-family: var(--font-body);
+}
+
+/* ─── Title Bar ─── */
+.shell-title-bar {
+  display: flex;
+  align-items: center;
+  background: #ededeb;
+  height: 42px;
+  user-select: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.shell-traffic-lights {
+  display: flex;
+  gap: 8px;
+  padding: 0 16px;
+  flex-shrink: 0;
+}
+
+.shell-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: default;
+  transition: filter 0.15s;
+}
+
+.shell-light:hover {
+  filter: brightness(1.1);
+}
+
+.shell-light.close { background: #ff5f57; }
+.shell-light.minimize { background: #febc2e; }
+.shell-light.maximize { background: #28c840; }
+
+/* ─── Tab Bar ─── */
+.shell-tab-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  flex: 1;
+  height: 100%;
+  overflow-x: auto;
+  padding-right: 8px;
+}
+
+.shell-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 16px;
+  margin-top: auto;
+  border-radius: 8px 8px 0 0;
+  background: transparent;
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  cursor: default;
+  max-width: 240px;
+  min-width: 80px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.shell-tab.active {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.shell-tab-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shell-new-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border: none;
+  background: none;
+  color: #999;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.shell-new-tab:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: #666;
+}
+
+/* ─── Navigation Bar ─── */
+.shell-nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+.shell-nav-controls {
+  display: flex;
+  gap: 1px;
+  flex-shrink: 0;
+}
+
+.shell-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  color: #aaa;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.shell-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #666;
+}
+
+.shell-nav-actions {
+  display: flex;
+  gap: 1px;
+  flex-shrink: 0;
+}
+
+/* ─── URL Bar ─── */
+.shell-url-bar {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 32px;
+  background: #eeeee9;
+  border-radius: 8px;
+  padding: 0 12px;
+  gap: 8px;
+  border: 2px solid transparent;
+  transition: background 0.15s, border-color 0.2s;
+}
+
+.shell-url-bar:hover {
+  background: #e8e8e3;
+}
+
+.shell-url-bar.focused {
+  background: #fff;
+  border-color: rgba(45, 90, 90, 0.5);
+}
+
+.shell-url-icon {
+  color: #28c840;
+  flex-shrink: 0;
+}
+
+.shell-url-input {
+  flex: 1;
+  border: none;
+  background: none;
+  color: var(--fg-muted);
+  font-size: 12.5px;
+  font-family: var(--font-body);
+  outline: none;
+  min-width: 0;
+}
+
+.shell-url-input::selection {
+  background: rgba(45, 90, 90, 0.15);
+}
+
+/* ─── Bookmarks Bar ─── */
+.shell-bookmarks {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 12px 5px;
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+  flex-shrink: 0;
+}
+
+.shell-bookmark {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  font-size: 11.5px;
+  color: #888;
+  border-radius: 4px;
+  cursor: default;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+  letter-spacing: 0.01em;
+}
+
+.shell-bookmark:hover {
+  background: rgba(0, 0, 0, 0.04);
+  color: #555;
+}
+
+/* ─── Content Area ─── */
+.shell-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+
+/* Override portfolio styles inside shell */
+.shell-content .nav {
+  position: sticky;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(250, 249, 247, 0.85);
+}
+
+.shell-content .hero {
+  min-height: auto;
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+/* ─── Scrollbar ─── */
+.shell-content::-webkit-scrollbar {
+  width: 7px;
+}
+
+.shell-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.shell-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.shell-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .browser-shell {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .shell-bookmarks {
+    display: none;
+  }
+
+  .shell-nav-actions {
+    display: none;
+  }
+}
