@@ -17,7 +17,7 @@ export function BrowserShell({ children }) {
         </div>
         <div className="shell-tab-bar">
           <div className="shell-tab active">
-            <span className="shell-tab-title">Jin Glebell — Portfolio</span>
+            <span className="shell-tab-title">Jin Song — Portfolio</span>
           </div>
           <button className="shell-new-tab" aria-label="New tab">
             <svg width="11" height="11" viewBox="0 0 12 12">

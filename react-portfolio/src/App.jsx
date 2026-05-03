@@ -48,7 +48,7 @@ function App() {
     <>
       {/* ── Nav ── */}
       <nav className="nav">
-        <a href="#" className="nav-name">Jin Glebell</a>
+        <a href="#" className="nav-name">Jin Song</a>
         <div className="nav-links">
           <a href="#work" className="nav-link">Work</a>
           <a href="#experience" className="nav-link">Experience</a>
@@ -90,7 +90,7 @@ function App() {
                 <img
                   className="hero-img"
                   src="/pfp.png"
-                  alt="Jin Glebell"
+                  alt="Jin Song"
                 />
                 <span className="hero-img-badge">Open to work</span>
               </div>
@@ -223,7 +223,7 @@ function App() {
 
       {/* ── Footer ── */}
       <footer className="footer container">
-        <span>Jin Glebell &copy; {new Date().getFullYear()}</span>
+        <span>Jin Song &copy; {new Date().getFullYear()}</span>
         <span className="footer-right">Built with React</span>
       </footer>
     </>
