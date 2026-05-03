@@ -1,47 +1,45 @@
 import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
-const sections = ['about', 'experience', 'projects']
+const sections = ['about', 'experience', 'projects', 'community']
 
 const experience = [
-  { date: 'Present', role: 'Software Engineering Intern', company: 'Tap n Tell AI', tags: ['React', 'TypeScript', 'AI'] },
-  { date: 'Present', role: 'Software Engineering Contractor', company: 'iTOTEM Analytics', tags: ['Full Stack', 'Data'] },
-  { date: '2025', role: 'Volunteer', company: 'SIGGRAPH 2025', tags: ['Computer Graphics', 'Community'] },
-  { date: '2024', role: 'Software Engineering Intern', company: 'Cryptoslam', tags: ['Web3', 'Backend', 'APIs'] },
-  { date: '2024', role: 'Associate Writer', company: 'The Peak', tags: ['Writing', 'Journalism'] },
-  { date: '2023', role: 'Software Engineering Intern', company: 'Cictan', tags: ['Mobile', 'Full Stack'] },
-  { date: '2023', role: 'HIVE Leader', company: 'SFU Applied Science', tags: ['Leadership', 'Mentorship'] },
-  { date: '2022–23', role: 'Asst. Director of Events → First Year Rep', company: 'CSSS', tags: ['Events', 'Community'] },
+  { date: 'Mar 2026 — Present', role: 'Software Engineer (Contract)', company: 'iTOTEM Analytics', desc: 'Sole frontend developer on a full React website rebuild. Built an interactive dashboard with geospatial data visualization. Integrated an AI assistant for document retrieval and task automation.', tags: ['React', 'Data Viz', 'AI'] },
+  { date: 'Feb — Apr 2026', role: 'Software Engineering / AI Fullstack Intern', company: 'Tap n Tell AI', desc: 'Shipped customer-facing AI web tools end-to-end. Built new pages and reusable UI components for the React frontend.', tags: ['React', 'AI', 'Full Stack'] },
+  { date: 'Apr 2024 — Jan 2026', role: 'Software Engineering / AI Fullstack Intern', company: 'Ethoswarm', desc: 'Built the frontend for an in-app AI copilot with real-time streaming UI. Developed an AG-UI browser plugin from scratch. Shipped a news ticker component for a video livestream.', tags: ['React', 'Streaming', 'Browser Extension'] },
+  { date: 'May — Aug 2025', role: 'Software Developer Practicum', company: 'Centre for Digital Media', desc: 'Built a React data visualization dashboard with live-updating charts for UBC research data. Developed interactive UI for an educational iPad game in Unity.', tags: ['React', 'Unity', 'Data Viz'] },
+]
+
+const community = [
+  { date: 'Aug 2025', role: 'Team Coordinator, Logistics', company: 'SIGGRAPH 2025', desc: 'Coordinated logistics department operations and crowd management for the conference.' },
+  { date: '2021 — 2023', role: 'Executive', company: 'Computing Science Student Union', desc: 'Elected to departmental executive board: Assistant Director of Events (2022–2023), First Year Representative (2021–2022).' },
+  { date: '2015 — Present', role: 'English Teacher', company: 'Mustard Seed Library', desc: 'Teaching English to children in a remote village via live video calling.' },
 ]
 
 const projects = [
   {
+    title: 'Inky — Creative Writing Archive',
+    desc: 'Full reading experience with search, filtering, multi-chapter navigation, kudos, and threaded comments. Auth via NextAuth v5 + Google, spam protection with Cloudflare Turnstile.',
+    tags: ['Next.js', 'React', 'TypeScript'],
+    href: 'https://inky.whyjs.com',
+  },
+  {
     title: 'Falling Skies',
-    desc: 'Educational iPad game built with a UBC research lab, plus a web dashboard displaying live gameplay data.',
-    img: '/Printable1.jpg',
+    desc: 'Worked directly with client (a research lab) to create an educational iPad game and a web dashboard displaying live data from the game.',
     tags: ['Swift', 'React', 'Firebase'],
     href: 'https://thecdm.ca/projects/falling-skies-25-ubc-alive-research-lab',
   },
   {
     title: 'CookSmart',
-    desc: 'Multimedia AI app that generates recipes from text, image, and audio input.',
-    img: '/cooksmart2.png',
+    desc: 'Multimedia AI app that generates recipes based on text, image, and audio input.',
     tags: ['Kotlin', 'AI/ML', 'Android'],
     href: 'https://sites.google.com/view/cmpt362cooksmart/home',
   },
   {
     title: 'ProBloom',
-    desc: 'AI web app generating practice problems and auto-grading student answers across question formats.',
-    img: '/probloom.png',
+    desc: 'AI web app that generates practice problems and marks the user\'s answer to the practice problems. Users can choose between short, long, and multiple choice questions.',
     tags: ['Python', 'React', 'OpenAI'],
     href: 'https://github.com/Awesomedonut/Practice-Problem-Generator',
-  },
-  {
-    title: 'H2O Yeah!',
-    desc: 'Water tracking app UI prototype. Won both Class Favourite and Teaching Team Favourite awards.',
-    img: '/h2ohyeah.png',
-    tags: ['Figma', 'UI/UX', 'Prototype'],
-    href: 'https://docs.google.com/presentation/d/1xvdoUYfw9DBAA-82ZlgMlVXCUApBvl633G8EC93c35I/edit?usp=sharing',
   },
 ]
 
@@ -97,9 +95,9 @@ function App() {
         <header className="sidebar">
           <div className="sidebar-top">
             <h1 className="sidebar-name">Jin Song</h1>
-            <h2 className="sidebar-title">Software Developer + Artist</h2>
+            <h2 className="sidebar-title">Software Developer + Artist <span className="status-dot" title="Online"></span></h2>
             <p className="sidebar-desc">
-              I build things at the intersection of art and technology.
+              I'm obsessed with combining my passions: art + technologies, people + computers, writing + CS!
             </p>
             <nav className="section-nav">
               {sections.map((s) => (
@@ -134,26 +132,27 @@ function App() {
             <div className="section-label">About</div>
             <div className="about-text">
               <p>
-                I'm a software developer and artist who's obsessed with combining creative thinking
-                with engineering. My journey started with drawing and storytelling, and now I channel
-                that same energy into building software that feels alive.
+                I'm a Computing Science graduate from{' '}
+                <a href="https://www.sfu.ca/" target="_blank" rel="noopener noreferrer">Simon Fraser University</a>{' '}
+                based in the San Francisco Bay Area. I enjoy writing code, fiction, and nonfiction and
+                my dream is to found my own animation studio!
               </p>
               <p>
-                I've had the privilege of working at places like{' '}
-                <a href="https://www.tapntell.ai/" target="_blank" rel="noopener noreferrer">an AI startup</a>,{' '}
-                <a href="https://www.cryptoslam.io/" target="_blank" rel="noopener noreferrer">a Web3 data company</a>,{' '}
-                and as a <a href="https://the-peak.ca/tag/jin-song/" target="_blank" rel="noopener noreferrer">published writer</a> at
-                SFU's student newspaper.
+                I've shipped AI-powered web tools at{' '}
+                <a href="https://www.tapntell.ai/" target="_blank" rel="noopener noreferrer">Tap n Tell AI</a>,{' '}
+                built real-time streaming UIs and browser extensions at Ethoswarm, led a full React
+                website rebuild at iTOTEM Analytics, and created data visualization dashboards at
+                the <a href="https://thecdm.ca/" target="_blank" rel="noopener noreferrer">Centre for Digital Media</a>.
               </p>
               <p>
-                I enjoy writing code, fiction, and nonfiction — sometimes all in the same day.
-                My dream is to found my own animation studio, and every project I take on is a
-                step closer to that goal.
+                My toolkit includes React, Next.js, TypeScript, Python, FastAPI, and AI integrations
+                (OpenAI, LangChain, RAG, MCP Servers). I also speak English, French, and Chinese.
               </p>
               <p>
-                When I'm not coding, you'll find me drawing, watching Studio Ghibli films, or
-                volunteering at conferences like{' '}
-                <a href="https://www.siggraph.org/" target="_blank" rel="noopener noreferrer">SIGGRAPH</a>.
+                Fun fact: I produced a{' '}
+                <a href="https://www.youtube.com/@jin_glebell" target="_blank" rel="noopener noreferrer">YouTube video</a>{' '}
+                that hit 1 million views, and I've been teaching English to kids in a remote village
+                since 2015.
               </p>
             </div>
           </section>
@@ -168,11 +167,12 @@ function App() {
                   <div className="exp-role">
                     {e.role} · <span className="company-name">{e.company}</span>
                   </div>
-                  <div className="exp-tags">
+                  {e.desc && <p className="exp-desc">{e.desc}</p>}
+                  {e.tags && <div className="exp-tags">
                     {e.tags.map((t) => (
                       <span key={t} className="exp-tag">{t}</span>
                     ))}
-                  </div>
+                  </div>}
                 </div>
               </div>
             ))}
@@ -204,6 +204,22 @@ function App() {
                 </a>
               ))}
             </div>
+          </section>
+
+          {/* Community */}
+          <section id="community" className="content-section">
+            <div className="section-label">Community</div>
+            {community.map((c) => (
+              <div key={`${c.company}-${c.role}`} className="exp-card">
+                <span className="exp-date">{c.date}</span>
+                <div className="exp-body">
+                  <div className="exp-role">
+                    {c.role} · <span className="company-name">{c.company}</span>
+                  </div>
+                  {c.desc && <p className="exp-desc">{c.desc}</p>}
+                </div>
+              </div>
+            ))}
           </section>
 
         </main>

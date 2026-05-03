@@ -143,6 +143,7 @@
 .exp-body { display: flex; flex-direction: column; gap: 0.25rem; }
 .exp-role { font-size: 0.95rem; font-weight: 500; color: var(--slate-lightest); line-height: 1.3; }
 .exp-role .company-name { color: var(--green); }
+.exp-desc { font-size: 0.85rem; color: var(--slate); line-height: 1.6; margin-top: 0.25rem; }
 .exp-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
 .exp-tag {
   font-size: 0.7rem; font-weight: 500; color: var(--green);
