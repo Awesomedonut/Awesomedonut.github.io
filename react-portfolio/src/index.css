@@ -1,14 +1,21 @@
 :root {
-  --navy: #0a192f;
-  --navy-light: #112240;
-  --navy-lighter: #1d3461;
-  --slate: #8892b0;
-  --slate-light: #a8b2d1;
-  --slate-lightest: #ccd6f6;
-  --white: #e6f1ff;
-  --green: #64ffda;
-  --green-tint: rgba(100, 255, 218, 0.1);
-  --font: 'Inter', -apple-system, system-ui, sans-serif;
+  --navy: #313338;
+  --navy-light: #2b2d31;
+  --navy-lighter: #404249;
+  --slate: #949ba4;
+  --slate-light: #b5bac1;
+  --slate-lightest: #f2f3f5;
+  --white: #ffffff;
+  --green: #5865f2;
+  --green-tint: rgba(88, 101, 242, 0.15);
+  --font: 'gg sans', 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --discord-dark: #1e1f22;
+  --discord-blurple: #5865f2;
+  --discord-green: #57f287;
+  --discord-yellow: #fee75c;
+  --discord-fuchsia: #eb459e;
+  --discord-red: #ed4245;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,15 +31,16 @@ body {
   font-size: 16px;
   line-height: 1.6;
   color: var(--slate);
-  background: var(--navy);
+  background: var(--discord-dark);
   overflow-x: hidden;
 }
 
 ::selection {
-  background: rgba(100, 255, 218, 0.15);
+  background: rgba(88, 101, 242, 0.3);
   color: var(--slate-lightest);
 }
 
 img { display: block; max-width: 100%; }
-a { color: var(--green); text-decoration: none; transition: color 0.2s; }
+a { color: var(--discord-blurple); text-decoration: none; transition: color 0.2s; }
+a:hover { color: #7289da; }
 ul, ol { list-style: none; }

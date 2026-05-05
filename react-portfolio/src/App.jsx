@@ -35,12 +35,6 @@ const projects = [
     tags: ['Kotlin', 'AI/ML', 'Android'],
     href: 'https://sites.google.com/view/cmpt362cooksmart/home',
   },
-  {
-    title: 'ProBloom',
-    desc: 'AI web app that generates practice problems and marks the user\'s answer to the practice problems. Users can choose between short, long, and multiple choice questions.',
-    tags: ['Python', 'React', 'OpenAI'],
-    href: 'https://github.com/Awesomedonut/Practice-Problem-Generator',
-  },
 ]
 
 function App() {
@@ -86,7 +80,7 @@ function App() {
       <div
         className="spotlight"
         style={{
-          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(29, 78, 216, 0.07), transparent 80%)`
+          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(88, 101, 242, 0.1), transparent 80%)`
         }}
       />
 
@@ -149,9 +143,11 @@ function App() {
                 (OpenAI, LangChain, RAG, MCP Servers). I also speak English, French, and Chinese.
               </p>
               <p>
-                Fun fact: I produced a{' '}
-                <a href="https://www.youtube.com/@jin_glebell" target="_blank" rel="noopener noreferrer">YouTube video</a>{' '}
-                that hit 1 million views, and I've been teaching English to kids in a remote village
+                Fun fact: I created a{' '}
+                <a href="https://youtu.be/3pf_PXyt1Ik" target="_blank" rel="noopener noreferrer">YouTube video</a>{' '}
+                that hit 1 million views. I also{' '}
+                <a href="https://the-peak.ca/tag/jin-song/" target="_blank" rel="noopener noreferrer">wrote for The Peak</a>,
+                SFU's student newspaper, and I've been teaching English to kids in a remote village
                 since 2015.
               </p>
             </div>
